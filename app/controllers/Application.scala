@@ -8,12 +8,12 @@ object Application extends Controller {
   def index = Action {
     Ok(views.html.index("bbn"))
   }
-  def addQuestion = Action {
-    Ok(views.html.addQuestion())
-  }
-  def questionList = Action {
-    Ok(views.html.questionList())
-  }
+//  def addQuestion = Action {
+//    Ok(views.html.addQuestion())
+//  }
+//  def questionList = Action {
+//    Ok(views.html.questionList())
+//  }
   def questionListAdmin = Action {
     Ok(views.html.questionListAdmin())
   }

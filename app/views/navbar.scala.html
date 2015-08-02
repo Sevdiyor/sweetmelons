@@ -15,9 +15,8 @@
             <ul class="nav navbar-nav">
                         <li class="@if(activePage == "addMembers") {active} "><a href="@routes.Members.addMembers()">Ishtiroqchilarni <br/> ro'yhatga olish</a></li>
                         <li class="@if(activePage == "members") {active} "><a href="@routes.Members.membersList()">Ishtirokchilar</a></li>
-                        <li class="@if(activePage == "questionList") {active} "><a href="@routes.Application.questionList()">Savollar ro'yhati</a></li>
+                        <li class="@if(activePage == "questionList") {active} "><a href="@routes.Questions.questionsList()">Savollar ro'yhati</a></li>
                         <li class="@if(activePage == "startTest") {active} "><a href="@routes.Application.verification()">Testni boshlash</a></li>
-
             </ul>
             <div class="navbar navbar-right">
                 <a href="@routes.Application.verificationAdmin()"><button class="btn btn-primary margin-top">Kirish</button></a>

@@ -3,24 +3,28 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
-GET     /addQuestions               controllers.Application.addQuestion
-GET     /questionList               controllers.Application.questionList
-GET     /passingTest                controllers.Application.passingTest
+GET         /                         controllers.Application.index
+#GET         /addQuestions             controllers.Application.addQuestion
+#GET         /questionList             controllers.Application.questionList
+GET         /passingTest              controllers.Application.passingTest
 
-GET     /verification               controllers.Application.verification
+GET         /verification             controllers.Application.verification
 
-GET     /verificationAdmin          controllers.Application.verificationAdmin
-GET     /questionListAdmin          controllers.Application.questionListAdmin
+GET         /verificationAdmin        controllers.Application.verificationAdmin
+GET         /questionListAdmin        controllers.Application.questionListAdmin
 
-POST        /addMembers                 @controllers.Members.addMembers
-GET         /addMembers                 @controllers.Members.showAddForm
-GET         /membersList                @controllers.Members.membersList
-GET         /member/:id/remove          @controllers.Members.remove(id: Int)
-POST        /member/:id/edit            @controllers.Members.updateMembers(id: Int)
-GET         /member/:id/edit            @controllers.Members.editFormMembersList(id: Int)
+POST        /addQuestions             @controllers.Questions.addQuestions
+GET         /addQuestions             @controllers.Questions.showQuestionForm
+GET         /questionsList            @controllers.Questions.questionsList
+
+POST        /addMembers               @controllers.Members.addMembers
+GET         /addMembers               @controllers.Members.showAddForm
+GET         /membersList              @controllers.Members.membersList
+GET         /member/:id/remove        @controllers.Members.remove(id: Int)
+POST        /member/:id/edit          @controllers.Members.updateMembers(id: Int)
+GET         /member/:id/edit          @controllers.Members.editFormMembersList(id: Int)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET         /assets/*file             controllers.Assets.at(path="/public", file)
 
     
