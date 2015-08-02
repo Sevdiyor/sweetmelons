@@ -6,7 +6,24 @@ import play.api.mvc._
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+    Ok(views.html.index())
   }
-
+  def addQuestion = Action {
+    Ok(views.html.addQuestion())
+  }
+  def questionList = Action {
+    Ok(views.html.questionList())
+  }
+  def questionListAdmin = Action {
+    Ok(views.html.questionListAdmin())
+  }
+  def verification = Action {
+    Ok(views.html.verification())
+  }
+  def verificationAdmin = Action {
+    Ok(views.html.verificationAdmin())
+  }
+  def passingTest = Action {
+    Ok(views.html.passingTest())
+  }
 }
