@@ -24,7 +24,14 @@
                     <td>@i.secondname</td>
                     <td>@i.adress</td>
                     <td>@i.login</td>
-
+                    <td>
+                        <a href="@routes.Members.remove(i.id.get)">
+                            <button class="btn btn-danger">Delete</button>
+                        </a>
+                        <a href="@routes.Members.editFormMembersList(i.id.get)">
+                            <button class="btn btn-warning">Edit</button>
+                        </a>
+                    </td>
                 </tr>
             }
             </tbody>
