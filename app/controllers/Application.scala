@@ -14,9 +14,9 @@ object Application extends Controller {
 //  def questionList = Action {
 //    Ok(views.html.questionList())
 //  }
-  def questionListAdmin = Action {
-    Ok(views.html.questionListAdmin())
-  }
+//  def questionListAdmin = Action {
+//    Ok(views.html.questionListAdmin())
+//  }
   def verification = Action {
     Ok(views.html.verification())
   }

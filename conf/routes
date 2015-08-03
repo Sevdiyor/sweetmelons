@@ -4,18 +4,21 @@
 
 # Home page
 GET         /                         controllers.Application.index
-#GET         /addQuestions             controllers.Application.addQuestion
-#GET         /questionList             controllers.Application.questionList
+
 GET         /passingTest              controllers.Application.passingTest
 
 GET         /verification             controllers.Application.verification
 
 GET         /verificationAdmin        controllers.Application.verificationAdmin
-GET         /questionListAdmin        controllers.Application.questionListAdmin
 
 POST        /addQuestions             @controllers.Questions.addQuestions
 GET         /addQuestions             @controllers.Questions.showQuestionForm
 GET         /questionsList            @controllers.Questions.questionsList
+GET         /questionsListAdmin       @controllers.Questions.questionsListAdmin
+GET         /question/:id/remove      @controllers.Questions.remove(id: Int)
+POST        /question/:id/edit        @controllers.Questions.updateQuestions(id: Int)
+GET         /question/:id/edit        @controllers.Questions.editQuestionsForm(id: Int)
+
 
 POST        /addMembers               @controllers.Members.addMembers
 GET         /addMembers               @controllers.Members.showAddForm

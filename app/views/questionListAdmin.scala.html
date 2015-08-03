@@ -1,3 +1,5 @@
+@(testQuestion: List[QuestionData])
+
 @main("Savollar ro'yhati") {
     @navbarAdmin("questionListAdmin")
 
@@ -12,18 +14,23 @@
                 </tr>
             </thead>
             <tbody>
+            @for(i <- testQuestion) {
                 <tr>
-                    <td>1</td>
-                    <td>doewijfrmieomv mfrkejfiouqwnedjf mfrokefjks mfrkfoeirjgutpasldkjfj fjgioredk fkof?</td>
+                    <td>@i.question</td>
+                    <td>@i.aVariant</td>
+                    <td>@i.bVariant</td>
+                    <td>@i.cVariant</td>
+                    <td>@i.dVariant</td>
                     <td>
-                        <a href="#">
+                        <a href="@routes.Questions.remove(i.id.get)">
                             <button class="btn btn-danger btn-xs">O'chirish</button>
                         </a>
-                        <a href="#">
+                        <a href="@routes.Questions.editQuestionsForm(i.id.get)">
                             <button class="btn btn-warning btn-xs">O'zgartirish</button>
                         </a>
                     </td>
                 </tr>
+            }
             </tbody>
         </table>
     </div>

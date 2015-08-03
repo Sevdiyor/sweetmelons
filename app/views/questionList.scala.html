@@ -1,4 +1,4 @@
-@(questions: List[QuestionData])
+@(testQuestion: List[QuestionData])
 @main("Savollar ro'yhati") {
     @navbar("questionList")
 
@@ -14,18 +14,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @for(i <- questions) {
+                    @for(i <- testQuestion) {
                         <tr>
                             <td>@i.id</td>
                             <td>@i.question</td>
-                            @*<td>
-                                <a href="@routes.Students.remove(i.id.get)">
-                                    <button class="btn btn-danger">Delete</button>
-                                </a>
-                                <a href="@routes.Students.editFormStudentsList(i.id.get)">
-                                    <button class="btn btn-warning">Edit</button>
-                                </a>
-                            </td>*@
                         </tr>
                     }
                     </tbody>
