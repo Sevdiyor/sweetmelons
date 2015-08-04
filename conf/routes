@@ -25,6 +25,7 @@ GET         /question/:id/edit          @controllers.Questions.editQuestionsForm
 POST        /addMembers                 @controllers.Members.addMembers
 GET         /addMembers                 @controllers.Members.showAddForm
 GET         /membersList                @controllers.Members.membersList
+GET         /testResults                @controllers.Members.testResults
 GET         /membersListAdmin           @controllers.Members.membersListAdmin
 GET         /member/:id/remove          @controllers.Members.remove(id: Int)
 POST        /member/:id/edit            @controllers.Members.updateMembers(id: Int)

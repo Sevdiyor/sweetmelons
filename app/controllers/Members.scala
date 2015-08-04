@@ -15,6 +15,10 @@ class Members extends Controller{
     Logger.info(s"SHOW_ALL = ${membersDB.list}")
     Ok(views.html.membersList(membersDB.list))
   }
+  def testResults = DBAction { implicit rs =>
+    Logger.info(s"SHOW_ALL = ${membersDB.list}")
+    Ok(views.html.testResultList(membersDB.list))
+  }
   def membersListAdmin = DBAction { implicit rs =>
     Logger.info(s"SHOW_ALL = ${membersDB.list}")
     Ok(views.html.membersListAdmin(membersDB.list))
