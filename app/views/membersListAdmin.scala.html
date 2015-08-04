@@ -1,7 +1,7 @@
 @(members: List[MembersDB])
 
 @main("Ishtroqchilar ro'yhati") {
-    @navbar("membersList")
+    @navbarAdmin("membersListAdmin")
 
     <div class="container main-content">
 
@@ -14,6 +14,7 @@
                     <th>Otasining ismi</th>
                     <th>Yashash manzili</th>
                     <th>To'plagan bali</th>
+                    <th>O'chirish/O'zgartirish</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,13 +24,13 @@
                     <td>@i.surname</td>
                     <td>@i.secondname</td>
                     <td>@i.adress</td>
-                    <td>@i.login</td>
+                    <td><b> - </b></td>
                     <td>
                         <a href="@routes.Members.remove(i.id.get)">
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger btn-xs">O'chirish</button>
                         </a>
                         <a href="@routes.Members.editFormMembersList(i.id.get)">
-                            <button class="btn btn-warning">Edit</button>
+                            <button class="btn btn-warning btn-xs">O'zgartirish</button>
                         </a>
                     </td>
                 </tr>
