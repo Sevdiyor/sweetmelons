@@ -1,34 +1,43 @@
 @(members: List[MembersDB])
-    @main("Ishtroqchilar ro'yhati") {
-        @navbar("membersList")
-
+@main("Ishtroqchilar ro'yhati") {
+    @navbar("membersList")
+    <body class="indColor">
         <div class="container main-content">
 
-            <h1 class="text-center">Иштирокчилар рўйҳати</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Исми</th>
-                        <th>Фамилияси</th>
-                        <th>Манзили</th>
-                        <th>Амалий бали</th>
-                        <th>Тестда тўплаган бали</th>
-                        <th>Умумий бали</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @for(i <- members) {
-                    <tr>
-                        <td>@i.name</td>
-                        <td>@i.surname</td>
-                        <td>@i.secondname</td>
-                        <td>@i.adress</td>
-                        <td> - </td>
-
-                    </tr>
-                }
-                </tbody>
-            </table>
+            <h1 class="text-warning text-capitalize  shrift text-center thumbnail">
+                Энг билимдон қовунчи номинацияси <br/> бўйича танлов натижалари</h1>
+            <div class="thumbnail">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Исми</th>
+                            <th>Фамилияси</th>
+                            <th>Манзили</th>
+                            <th>Амалий бали</th>
+                            <th>Тестда тўплаган бали</th>
+                            <th>Умумий бали</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @for(i <- members) {
+                        <tr>
+                            <td>@i.name</td>
+                            <td>@i.surname</td>
+                            <td>@i.secondname</td>
+                            <td>@i.adress</td>
+                            <td> - </td>
+                            <td> - </td>
+                            @*<td>
+                                <a href="@routes.Questions.passingTest()">
+                                    <button type="button" class="btn btn-info">Testni boshlash</button>
+                                </a>
+                            </td>*@
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
         </div>
+    </body>
 
-    }
+}
