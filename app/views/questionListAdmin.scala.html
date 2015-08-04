@@ -7,21 +7,18 @@
         <h1 class="text-center">Savollar Ro'yhati</h1>
         <table class="table table-responsive">
             <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Savol</th>
-                    <th>O'chirish/O'zgartirish</th>
+                <tr class="row">
+                    <th class="col-md-1">№</th>
+                    <th class="col-md-7">Savol</th>
+                    <th class="col-md-4">O'chirish/O'zgartirish</th>
                 </tr>
             </thead>
             <tbody>
             @for(i <- testQuestion) {
-                <tr>
-                    <td>@i.question</td>
-                    <td>@i.aVariant</td>
-                    <td>@i.bVariant</td>
-                    <td>@i.cVariant</td>
-                    <td>@i.dVariant</td>
-                    <td>
+                <tr class="row">
+                    <td class="col-md-1">@i.id</td>
+                    <td class="col-md-7">@i.question</td>
+                    <td class="col-md-4">
                         <a href="@routes.Questions.remove(i.id.get)">
                             <button class="btn btn-danger btn-xs">O'chirish</button>
                         </a>

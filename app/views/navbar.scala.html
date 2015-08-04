@@ -9,17 +9,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="@routes.Application.index()"><img class="brand" src="assets\images\Brand.png" alt=""/></a>
+            <a class="navbar-brand" href="@routes.Application.index()"><img class="brand" src="assets\images\brand.png" alt="" class="img-responsive"/></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                        <li class="@if(activePage == "addMembers") {active} "><a class="navText" href="@routes.Members.addMembers()"><b>Ishtiroqchilarni <br/> ro'yhatga olish</b></a></li>
-                        <li class="@if(activePage == "members") {active} "><a href="@routes.Members.membersList()"><b>Ishtirokchilar</b></a></li>
-                        <li class="@if(activePage == "questionList") {active} "><a href="@routes.Questions.questionsList()"><b>Savollar ro'yhati</b></a></li>
-                        <li class="@if(activePage == "startTest") {active} "><a href="@routes.Application.verification()"><b>Testni boshlash</b></a></li>
+                        <li class="@if(activePage == "addMembers") {active} "><a href="@routes.Members.addMembers()">Ro'yhatdan o'tish</a></li>
+                        <li class="@if(activePage == "members") {active} "><a href="@routes.Members.membersList()">Ishtirokchilar ro'yhati</a></li>
+                        <li class="@if(activePage == "questionList") {active} "><a href="@routes.Questions.questionsList()">Savollar ro'yhati</a></li>
+                        <li class="@if(activePage == "startTest") {active} "><a href="@routes.Application.verification()">Testni boshlash</a></li>
             </ul>
             <div class="navbar navbar-right">
-                <a href="@routes.Application.verificationAdmin()"><button class="btn btn-primary margin-top"><b>Kirish</b></button></a>
+                <a href="@routes.Application.verificationAdmin()"><button class="btn btn-primary margin-top">Kirish</button></a>
             </div>
         </div>
         </div>

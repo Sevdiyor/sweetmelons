@@ -3,38 +3,34 @@
 # ~~~~
 
 # Home page
-GET         /                         controllers.Application.index
+GET         /                           controllers.Application.index
 
-GET         /passingTest              controllers.Application.passingTest
 
-GET         /verification             controllers.Application.verification
+
+GET         /verification               controllers.Application.verification
+
+GET         /verificationAdmin          controllers.Application.verificationAdmin
+
+GET         /passingTest                @controllers.Questions.passingTest
+
+POST        /addQuestions               @controllers.Questions.addQuestions
+GET         /addQuestions               @controllers.Questions.showQuestionForm
+GET         /questionsList              @controllers.Questions.questionsList
+GET         /questionsListAdmin         @controllers.Questions.questionsListAdmin
+GET         /question/:id/remove        @controllers.Questions.remove(id: Int)
+POST        /question/:id/edit          @controllers.Questions.updateQuestions(id: Int)
+GET         /question/:id/edit          @controllers.Questions.editQuestionsForm(id: Int)
+
 
 POST        /addMembers                 @controllers.Members.addMembers
 GET         /addMembers                 @controllers.Members.showAddForm
 GET         /membersList                @controllers.Members.membersList
-GET         /membersList                @controllers.Members.membersList
+GET         /membersListAdmin           @controllers.Members.membersListAdmin
 GET         /member/:id/remove          @controllers.Members.remove(id: Int)
 POST        /member/:id/edit            @controllers.Members.updateMembers(id: Int)
 GET         /member/:id/edit            @controllers.Members.editFormMembersList(id: Int)
-GET         /verificationAdmin        controllers.Application.verificationAdmin
-
-POST        /addQuestions             @controllers.Questions.addQuestions
-GET         /addQuestions             @controllers.Questions.showQuestionForm
-GET         /questionsList            @controllers.Questions.questionsList
-GET         /questionsListAdmin       @controllers.Questions.questionsListAdmin
-GET         /question/:id/remove      @controllers.Questions.remove(id: Int)
-POST        /question/:id/edit        @controllers.Questions.updateQuestions(id: Int)
-GET         /question/:id/edit        @controllers.Questions.editQuestionsForm(id: Int)
-
-
-POST        /addMembers               @controllers.Members.addMembers
-GET         /addMembers               @controllers.Members.showAddForm
-GET         /membersList              @controllers.Members.membersList
-GET         /member/:id/remove        @controllers.Members.remove(id: Int)
-POST        /member/:id/edit          @controllers.Members.updateMembers(id: Int)
-GET         /member/:id/edit          @controllers.Members.editFormMembersList(id: Int)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET         /assets/*file               controllers.Assets.at(path="/public", file)
 
     

@@ -19,7 +19,11 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "0.8.0" withJavadoc() withSources(),
   "com.typesafe.slick" % "slick_2.11" % "2.1.0",
   "com.github.tototoshi" %% "slick-joda-mapper" % "1.2.0",
-  "com.typesafe.play" %% "play-slick" % "0.8.0"
+  "com.typesafe.play" %% "play-slick" % "0.8.0",
+// Auth
+"jp.t2v" %% "play2-auth" % "0.12.0" withSources() withJavadoc(),
+"jp.t2v" %% "play2-auth-test" % "0.12.0" % "test" withSources() withJavadoc(),
+"jp.t2v" %% "stackable-controller" % "0.4.0" withSources() withJavadoc()
 )
 
 

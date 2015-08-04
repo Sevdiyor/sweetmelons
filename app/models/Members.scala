@@ -1,6 +1,11 @@
 package models
 
+/*import models.BaseEnum
+import models.UserRoleEnum._*/
 import play.api.db.slick.Config.driver.simple._
+
+
+
 
 case class MembersDB(id: Option[Int],
                      name: String,
@@ -9,7 +14,9 @@ case class MembersDB(id: Option[Int],
                      adress: String,
                      login: String,
                      pass: String,
-                     confPass: String)
+                     confPass: String/*,
+                     role: UserRoleEnum.UserRole*/)
+
 class MembersDBTables(tag: Tag) extends Table[MembersDB](tag, "Members") {
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
@@ -28,7 +35,11 @@ class MembersDBTables(tag: Tag) extends Table[MembersDB](tag, "Members") {
 
   def confPass = column[String]("CONFPASS", O.Default(""))
 
-  def * = (id.?, name, surname , secondname, adress, login, pass, confPass) <>(MembersDB.tupled,MembersDB.unapply _)
+  /*def role = column[UserRoleEnum.UserRole]("ROLE", O.NotNull)*/
+
+  def * = (id.?, name, surname , secondname, adress, login, pass/*, role*/, confPass) <>(MembersDB.tupled,MembersDB.unapply _)
 
 }
+
+
 

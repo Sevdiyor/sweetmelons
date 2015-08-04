@@ -16,7 +16,10 @@ class Questions extends Controller{
     Logger.info(s"SHOW_ALL = ${questionData.list}")
     Ok(views.html.questionListAdmin(questionData.list))
   }
-
+  def passingTest = DBAction { implicit rs =>
+    Logger.info(s"SHOW_ALL = ${questionData.list}")
+    Ok(views.html.passingTest(questionData.list))
+  }
   def showQuestionForm = DBAction { implicit rs =>
     Ok(views.html.addQuestion())
   }
