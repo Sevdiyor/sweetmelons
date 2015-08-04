@@ -13,20 +13,20 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                        <li class="@if(activePage == "addMembers") {active} "><a href="@routes.Members.addMembers()">Ishtiroqchilarni <br/> ro'yhatga olish</a></li>
-                        <li class="@if(activePage == "membersListAdmin") {active} "><a href="@routes.Members.membersListAdmin()">Ishtiroqchilar ro'yhati</a></li>
+                        <li class="@if(activePage == "addMembers") {active} "><a href="@routes.Members.addMembers()">Рўйҳатга олиш</a></li>
+                        <li class="@if(activePage == "membersListAdmin") {active} "><a href="@routes.Members.membersListAdmin()">Иштирокчилар рўйҳати</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        Test savollar<span class="caret"></span></a>
+                        Тест саволлар<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li class="@if(activePage == "addQuestions") {active} "><a href="@routes.Questions.addQuestions()">Savol qo'shish</a></li>
-                        <li class="@if(activePage == "questionListAdmin") {active} "><a href="@routes.Questions.questionsListAdmin()">Savollar ro'yhati</a></li>
+                        <li class="@if(activePage == "addQuestions") {active} "><a href="@routes.Questions.addQuestions()">Савол қўшиш</a></li>
+                        <li class="@if(activePage == "questionListAdmin") {active} "><a href="@routes.Questions.questionsListAdmin()">Саволлар рўйҳати</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="navbar-form navbar-right">
                 <a href="@routes.Application.index()">
-                    <button class="btn btn-default">Chiqish</button>
+                    <button class="btn btn-default">Чиқиш</button>
                 </a>
             </div>
         </div>
