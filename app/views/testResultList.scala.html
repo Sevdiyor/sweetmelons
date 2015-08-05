@@ -6,36 +6,43 @@
 
             <h1 class="text-warning text-capitalize  shrift text-center thumbnail">
                 Энг билимдон қовунчи номинацияси <br/> бўйича танлов натижалари</h1>
-            <div class="thumbnail">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>Исми</th>
-                            <th>Фамилияси</th>
-                            <th>Манзили</th>
-                            <th>Амалий бали</th>
-                            <th>Тестда тўплаган бали</th>
-                            <th>Умумий бали</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @for(i <- members) {
-                        <tr>
-                            <td>@i.name</td>
-                            <td>@i.surname</td>
-                            <td>@i.secondname</td>
-                            <td>@i.adress</td>
-                            <td> - </td>
-                            <td> - </td>
-                            @*<td>
-                                <a href="@routes.Questions.passingTest()">
-                                    <button type="button" class="btn btn-info">Testni boshlash</button>
-                                </a>
-                            </td>*@
-                        </tr>
-                    }
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-md-1">
+                    <br/><br/>
+                    <div class="badge badge-1">1</div>
+                    <br/><br/>
+                    <div class="badge badge-2">2</div>
+                    <br/><br/>
+                    <div class="badge badge-3">3</div>
+                </div>
+                <div class="col-md-11">
+                    <div class="thumbnail margin-left">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Исми</th>
+                                    <th>Фамилияси</th>
+                                    <th>Манзили</th>
+                                    <th>Амалий бали</th>
+                                    <th>Тестда тўплаган бали</th>
+                                    <th>Умумий бали</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @for(i <- members) {
+                                <tr>
+                                    <td>@i.name</td>
+                                    <td>@i.surname</td>
+                                    <td>@i.secondname</td>
+                                    <td>@i.adress</td>
+                                    <td> - </td>
+                                    <td> - </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

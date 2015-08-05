@@ -6,31 +6,49 @@
 
             <h1 class="text-warning text-capitalize  shrift text-center thumbnail">
                 Ишторқчилар рўйхати</h1>
-            <div class="thumbnail">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th>Исми</th>
-                            <th>Фамилияси</th>
-                            <th>Манзили</th>
-                            <th>Тестни бошлаш</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    @for(i <- members) {
-                        <tr>
-                            <td><h3>@i.name</h3></td>
-                            <td><h3>@i.surname</h3></td>
-                            <td><h3>@i.adress</h3></td>
-                            <td>
-                                <a href="@routes.Questions.passingTest()">
-                                    <button type="button" class="btn btn-info"><h4>Testni boshlash</h4></button>
-                                </a>
-                            </td>
-                        </tr>
-                    }
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-md-1">
+                    <br/><br/>
+                    <h1 class="numeration-padding">1.<br/></h1><h1 class="numeration-padding">
+                    2.<br/></h1><h1 class="numeration-padding">3.<br/></h1><h1 class="numeration-padding">
+                    4.<br/></h1><h1 class="numeration-padding">5.<br/></h1><h1 class="numeration-padding">
+                    6.<br/></h1><h1 class="numeration-padding">7.<br/></h1><h1 class="numeration-padding">
+                    8.<br/></h1><h1 class="numeration-padding">9.<br/></h1><h1 class="numeration-padding">
+                    10.<br/></h1><h1 class="numeration-padding">11.<br/></h1><h1 class="numeration-padding">
+                    12.<br/></h1><h1 class="numeration-padding">13.<br/></h1><h1 class="numeration-padding">
+                    14.<br/></h1><h1 class="numeration-padding">15.<br/></h1><h1 class="numeration-padding">
+                    16.<br/></h1><h1 class="numeration-padding">17.<br/></h1><h1 class="numeration-padding">
+                    18.<br/></h1><h1 class="numeration-padding">19.<br/></h1><h1 class="numeration-padding">
+                    20.<br/></h1><h1 class="numeration-padding">21.<br/></h1>
+                </div>
+                <div class="col-md-11">
+                    <div class="thumbnail margin-leftList">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Исми</th>
+                                    <th>Фамилияси</th>
+                                    <th>Манзили</th>
+                                    <th>Тестни бошлаш</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @for(i <- members) {
+                                <tr >
+                                    <td><h3>@i.name</h3></td>
+                                    <td><h3>@i.surname</h3></td>
+                                    <td><h3>@i.adress</h3></td>
+                                    <td>
+                                        <a href="@routes.Questions.passingTest()">
+                                            <button type="button" class="btn btn-info"><h4>Testni boshlash</h4></button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

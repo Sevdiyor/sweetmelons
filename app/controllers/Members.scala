@@ -40,7 +40,7 @@ class Members extends Controller{
     val confPass = formParams.get("confPass")(0)
 
     val membersId = (membersDB returning membersDB.map(_.id)) += MembersDB(None, name, surname, secondname, adress, login, pass, confPass)
-    Redirect(routes.Members.membersList())
+    Redirect(routes.Members.membersListAdmin())
   }
 
 
